@@ -1,0 +1,109 @@
+/* style.less
+ * v1.0.0
+ */
+
+// Core Typography
+  // 'Roboto' 300,300i,700,700i - 'Montserrat' 400,700
+  @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:700italic,300,700,300italic);
+
+// SET Variables
+  @baseFontSizeMultiplier: 10px;
+  @touchBase: 5rem; //5 times the multiplier REM = HTML/BODY font size for older browsers
+  @navHeight: (@touchBase * 2.4);
+  // colours
+  @color-white: #fff;
+  @color-main: #333;
+  @color-chartBG: darken(@color-white,3%);
+  // typography
+  @ff-main: 'Roboto', 'Helvetica-Neue', sans-serif;
+  @ff-header: 'Montserrat', 'Helvetica-Neue', sans-serif;
+
+// Import Bootstrap Flex framework
+  @import "bootstrap.min.css";
+
+// App-specific class definitions
+  .restrict960 {
+    display: block;
+    max-width: 960px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .hide-desktop {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+
+  //DEBUG CLASSES
+  .g10 {
+    background-color: rgba(0,0,0,0.1);
+  }
+
+// FLEXBOX CLASSES
+  .flexContainer {
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+    flex-wrap: nowrap !important;
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -webkit-align-content: stretch !important;
+    -ms-flex-line-pack: stretch !important;
+    align-content: stretch !important;
+    -webkit-align-items: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    &.flexContainerRow {
+      -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+      flex-direction: row !important;
+    }
+    &.flexContainerColumn {
+      -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+      flex-direction: column !important;
+    }
+    &.flexContainerSpaceAround {
+      -webkit-justify-content: space-around !important;
+      -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
+    }
+    .flexItem {
+      -webkit-order: 0 !important;
+      -ms-flex-order: 0 !important;
+      order: 0 !important;
+      -webkit-flex: 0 0 auto !important;
+      -ms-flex: 0 0 auto !important;
+      flex: 0 0 auto !important;
+      -webkit-align-self: auto !important;
+      -ms-flex-item-align: auto !important;
+      align-self: auto !important;
+      &.flexItemElastic {
+        -webkit-flex: 1 1 auto !important;
+        -ms-flex: 1 1 auto !important;
+        flex: 1 1 auto !important;
+      }
+    }
+  }
+
+// Site-layout objects
+  section.jumbotron {
+    min-height: 65vh;
+    h1.display-1 {
+      display: inline-block;
+    }
+  }
+  
