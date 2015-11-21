@@ -8,15 +8,39 @@
 
 // SET Variables
   @baseFontSizeMultiplier: 10px;
-  @touchBase: 5rem; //5 times the multiplier REM = HTML/BODY font size for older browsers
-  @navHeight: (@touchBase * 2.4);
-  // colours
-  @color-white: #fff;
-  @color-main: #333;
-  @color-chartBG: darken(@color-white,3%);
-  // typography
-  @ff-main: 'Roboto', 'Helvetica-Neue', sans-serif;
-  @ff-header: 'Montserrat', 'Helvetica-Neue', sans-serif;
+  @globalBG : #000;
+  @appBG1 : #f0f0f0;
+  @appBG : #fff;
+  @modalBG : darken(@appBG,2%);
+  @actionSheetBG : rgba(0,0,0,0.85);
+  @mainColor : rgb(73,72,73);
+  @tintColor : rgb(74,144,226);
+  @cancelColor : rgb(238,37,36);
+  @successColor : rgb(53,226,143);
+  @touchBase : 50px;
+  @navBase : @touchBase * 1.5;
+  @navBG : rgba(red(@appBG),green(@appBG),blue(@appBG),0.95);
+  @mainColorMedium : lighten(@mainColor,20%);
+  @mainColorLight : lighten(@mainColor,40%);
+  @mainColorDark : darken(@mainColor,10%);
+  @tintColorDark : darken(@tintColor,20%);
+  @tintColorLight : lighten(@tintColor,20%);
+  @cancelColorDark : darken(@cancelColor,20%);
+  @cancelColorLight : lighten(@cancelColor,20%);
+  @successColorDark : darken(@successColor,20%);
+  @successColorLight : lighten(@successColor,20%);
+  @imageBGColor: #fafafa;
+  @timingFunction : cubic-bezier(.11,1,.97,1);
+  @fontFamilyB : "AvenirNext-Bold","Roboto-Bold";
+  @fontFamilyM : "AvenirNext-DemiBold","Roboto-Medium";
+  @fontFamilyL : "AvenirNext-UltraLight","Roboto-Light";
+  @fontFamily : "AvenirNext-Regular","Roboto";
+  @fontFamilySerif : "Times New Roman", "Times";
+  @fontFamilyHeader : "ArquitectaBold";
+  @fontFamilyHeaderB : "ArquitectaBlack";
+  @fontFamilyHeaderL : "ArquitectaLight";
+  @inputFontSize: 1.1rem;
+  @borderStandard : (@touchBase / @touchBase) solid;
 
 // Import Bootstrap Flex framework
   @import "bootstrap.min.css";
@@ -99,11 +123,52 @@
     }
   }
 
+// Base Styles
+  html, body {
+    margin: 0;
+    padding: 0;
+    color: @mainColor;
+    background-color: @appBG;
+  }
+
 // Site-layout objects
   section.jumbotron {
-    min-height: 65vh;
-    h1.display-1 {
-      display: inline-block;
+    margin-top: 5vh;
+    min-height: 70vh;
+    background-color: darken(@appBG, 2%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    //background-position: 50% 80%;
+    //background-image: url(../img/bg01.jpg);
+    background-position: 100% 30%;
+    background-image: url(../img/bg02.jpg);
+    img {
+      margin-bottom: 2vh;
     }
+    h1 {
+      color: @tintColor;
+    }
+    h2 {
+      color: @mainColorLight;
+    }
+    a.btn {
+      margin-top: 2vh;
+    }
+  }
+
+  section.appLinks {
+    height: 200px;
+    .appBtn {
+      height: 40px;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  footer.privacy {
+    margin-top: 10vh;
+    min-height: 20vh;
   }
   

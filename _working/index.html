@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>CTi - Sentiment Dashboard</title>
+  <title>SHH SANTA!</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
@@ -9,13 +9,41 @@
   <!-- Link to CDN for jQuery latest -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body class="">
+<body id="main" class="" >
 
-<section class="jumbotron flexContainer flexContainerSpaceAround">
-  <h1 class="display-1 flexItem">
+<section class="jumbotron flexContainer flexContainerColumn">
+  <img src="img/face_131x128@2x.png" width="131" height="128" class="flexItem">
+  <h1 class="display-2 flexItem">
     Shh Santa!
   </h1>
+  <h2 class="flexItem">
+    The easiest Secret Santa app ever!
+  </h2>
+  <section id="appLinks" class="appLinks flexItem flexContainer flexContainerRow">
+    <a class="flexItem" href="https://geo.itunes.apple.com/us/app/shh-santa!/id1057261178?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+    <a class="appBtn flexItem" href="https://play.google.com/store/apps/details?id=co.n2d.ShhSanta&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a>
+  </section>
 </section>
+
+
+
+<footer class="container">
+  <div class="row">
+    <div class="col-xs-6 col-s-4">
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    </div>
+    <div class="col-xs-6 col-s-4">
+    <p>
+      Android, Google Play and the Google Play logo are trademarks of Google Inc.
+    </p>
+    <p>
+      Apple, App Store and the Apple logo are trademarks of Apple Inc.
+    </p>
+    </div>
+  </div>
+</footer>
 
 <!-- External JS -->
 <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
@@ -28,6 +56,16 @@
   });
 </script>
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60588713-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
